@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuya Kariyuki | プロテニスプレーヤー 狩行 祐哉</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0a0a0f',
+                            accent: '#ccff00', // ネオンイエロー
+                            blue: '#00d2ff', // シアンブルー
+                            gray: '#8a8f98'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        display: ['"Outfit"', '"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0a0a0f;
+            color: #f3f4f6;
+        }
+        .hero-bg {
+            background-image: 
+                linear-gradient(to top, rgba(10, 10, 15, 1) 5%, rgba(10, 10, 15, 0.2)), 
+                url('../assets/アスリート_狩行_テニス写真1.jpg');
+            background-size: cover;
+            background-position: center 20%;
+        }
+        .parallax-bg {
+            background-image: 
+                linear-gradient(rgba(10, 10, 15, 0.7), rgba(10, 10, 15, 0.9)), 
+                url('../assets/アスリート_狩行_テニス写真2.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center 25%;
+        }
+        .accent-text-gradient {
+            background: linear-gradient(135deg, #ccff00, #00d2ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        .article-text p {
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            letter-spacing: 0.03em;
+            color: #d1d5db;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased overflow-x-hidden selection:bg-brand-accent selection:text-black">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="glass-card border-b border-white/5">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+                <div class="text-xl font-display font-bold tracking-wider text-white">
+                    TEAM SDC <span class="text-brand-accent">ATHLETE</span>
+                </div>
+                <div class="text-sm font-medium tracking-widest text-brand-gray hidden md:block uppercase">
+                    Pro Tennis Player
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen hero-bg flex flex-col justify-end pb-24 md:pb-32 px-6">
+        <div class="max-w-7xl mx-auto w-full" data-aos="fade-up" data-aos-duration="1200">
+            <div class="mb-4 inline-block px-4 py-1 border border-brand-accent text-brand-accent text-xs md:text-sm font-bold tracking-widest uppercase rounded-full">
+                Sports Create Athlete
+            </div>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-black tracking-tight text-white leading-tight mb-2">
+                YUYA <br><span class="accent-text-gradient">KARIYUKI</span>
+            </h1>
+            <p class="text-xl md:text-2xl font-bold font-sans text-gray-300 tracking-wider mt-4">
+                狩行 祐哉
+            </p>
+            <div class="mt-8 max-w-2xl border-l-4 border-brand-accent pl-6 py-2">
+                <p class="text-2xl md:text-3xl font-bold leading-relaxed">
+                    自分が選んだ道を、<br/>
+                    正解にするしかない。
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Story Main Content -->
+    <main class="max-w-7xl mx-auto px-6 py-24 md:py-32 grid grid-cols-1 lg:grid-cols-12 gap-16 relative">
+        <!-- サイドナビゲーション (LG screen) -->
+        <div class="hidden lg:block lg:col-span-3">
+            <div class="sticky top-32 glass-card p-6 rounded-2xl">
+                <h3 class="font-display font-bold text-lg text-brand-accent uppercase tracking-widest mb-6 border-b border-white/10 pb-4">Contents</h3>
+                <ul class="space-y-4 text-sm font-medium text-brand-gray">
+                    <li><a href="#story" class="hover:text-white transition-colors">Story - 2つの才能の間で</a></li>
+                    <li><a href="#tokyo" class="hover:text-white transition-colors">知り合いゼロからの東京</a></li>
+                    <li><a href="#athlete" class="hover:text-white transition-colors">アスリート社員として</a></li>
+                    <li><a href="#interview" class="hover:text-white transition-colors">ロングインタビュー (Q&A)</a></li>
+                    <li><a href="#profile" class="hover:text-white transition-colors">Profile</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 記事本文 -->
+        <div class="lg:col-span-9 article-text">
+            
+            <section id="story" class="mb-24" data-aos="fade-up">
+                <div class="flex items-center gap-4 mb-10 border-b border-white/10 pb-6">
+                    <span class="text-4xl font-display font-black text-brand-blue/30">01</span>
+                    <h2 class="text-3xl md:text-4xl font-black text-white tracking-wide uppercase font-display">Story</h2>
+                </div>
+
+                <h3 class="text-2xl font-bold text-white mb-6 border-l-2 border-brand-accent pl-4">陸上かテニスか ── 2つの才能の間で</h3>
+                <p>鹿児島で育ち、小学2年生でテニスを始める。同時に陸上もやっていた。長距離では県で1番──父からもらった身体能力だ。</p>
+                <p>中学では硬式テニス部がなく、陸上部へ。テニスは週1〜2回に減り、試合にもほとんど出なくなる。</p>
+                <p>転機は高校進学のとき。陸上とテニス、両方から推薦が届いた。成績だけなら陸上が圧倒的で、周囲も陸上を勧める。それでも狩行はテニスを選んだ。</p>
+                <p class="text-xl font-bold text-white my-8 pl-6 border-l border-white/20">「鹿児島で何連覇もしている鳳凰高校を、県内の選手だけで倒そう。鹿児島実業に県のトップ5人が集まっていた。僕もそこに入りたかった」</p>
+                <p>仲間と一緒に王者を倒す。そのストーリーに、乗りたかった。</p>
+
+                <h3 class="text-2xl font-bold text-white mt-16 mb-6 border-l-2 border-brand-accent pl-4">ボール拾いから始まった高校テニス</h3>
+                <p>だが、入部してみると現実は厳しい。実力不足で戦力外、最初の仕事はボール拾いだった。</p>
+                <p>鹿児島実業のテニスコートは陸上グラウンドの中にある。陸上も強豪校だ。走っている選手たちを横目に、ボールを拾う毎日。「陸上のきつさから逃げて、楽なテニスを選んだんじゃないか」──その葛藤が、ずっとつきまとう。</p>
+                <p>「でも、もう選んでしまったのはしょうがない。自分が選んだ道を正解にするしかないって気持ちでやってました」</p>
+                <p>部活が7時に終わっても、8時まで必ず残る。ボール拾いの間も、強い選手のプレーを観察し、何をしているか聞いた。テニスの練習だけでは追い込みきれないと感じれば、練習後に1人で長距離を走る。陸上で鍛えた根性を、テニスに注ぎ込んだ。</p>
+                <p>そして迎えた3年目のインターハイ予選。鹿児島県ベスト4に初めて入り、個人戦で全国大会の切符をつかむ。ジュニアから一度も勝てなかった相手に、最後の年で初めて勝った。</p>
+
+                <h3 class="text-2xl font-bold text-white mt-16 mb-6 border-l-2 border-brand-accent pl-4">九州1位。でも全国では勝てない</h3>
+                <p>大学は地元の鹿屋体育大学へ。九州では最もレベルが高いが、関東の大学には届かなかった。教員免許も取れるという理由で選んだ先──テニスがだめでも、体育の先生になれるように。</p>
+                <p>2年生で九州1位に。そこから卒業まで3年連続、九州の頂点に立ち続ける。だがインカレに出ると1回戦負け。九州からでも全国で戦えることを証明したかった。4年間を通して、それは叶わなかった。</p>
+                <p>「九州1位で満足してたら、全国とか見なくてよかったかもしれない。でもインカレで勝ちたくて、全然満足できなくて」</p>
+
+                <h3 class="text-2xl font-bold text-white mt-16 mb-6 border-l-2 border-brand-accent pl-4">運命の電話</h3>
+                <p>大学4年の秋、進路が決まらない。周囲の同期は就職先が決まっていく中、テニスのない就職は考えられない。実業団は仕事がメインでプロには追いつけない。消去法で大学院を選びかけていた。</p>
+                <p>そのタイミングで、久次米社長から声がかかる。鹿屋体育大学のOBである社長が、アスリート社員制度を復活させたいと選手を探していた。</p>
+                <p class="text-brand-accent font-bold text-xl my-6">「もう二つ返事でした。運命かのように、もう絶対行くって」</p>
+                <p>両親は心配した。急に東京の知らない会社に行くという。しかも大学院に行くと言っていた矢先に。結局、大学院に籍を置いたまま上京するという形で折り合いをつけた。</p>
+                <p>「僕がやれば絶対できるっていう自信はあった。陸上からテニスに転向して、ボール拾いから全国大会まで行った。あの3年間で実証したから。よりいい環境に身を置いたら、もっと強くなれると思っていました」</p>
+            </section>
+
+            <section id="tokyo" class="mb-24" data-aos="fade-up">
+                <div class="flex items-center gap-4 mb-10 border-b border-white/10 pb-6">
+                    <span class="text-4xl font-display font-black text-brand-blue/30">02</span>
+                    <h2 class="text-3xl md:text-4xl font-black text-white tracking-wide">知り合いゼロからの東京</h2>
+                </div>
+                <p>鹿児島から単身上京。知り合いはゼロ、練習相手すらいない。</p>
+                <p>「東京に来たら手当たり次第DMして、いろんな大学の練習に参加させてもらえないですかって。そこからのスタートでした」</p>
+                <p>Instagramでメッセージを飛ばし続け、日本大学が快く受け入れてくれたことが転機になる。少しずつネットワークが広がっていった。</p>
+                <p>入社1年で日本ランキングは500番台から50位へ。世界ランキングも獲得。陸上上がりで、鹿児島にずっといて、ジュニアの全国区でもなかった選手が──。本人も「できすぎてる」と笑う。</p>
+            </section>
+
+            <section id="athlete" class="mb-12" data-aos="fade-up">
+                <div class="flex items-center gap-4 mb-10 border-b border-white/10 pb-6">
+                    <span class="text-4xl font-display font-black text-brand-blue/30">03</span>
+                    <h2 class="text-3xl md:text-4xl font-black text-white tracking-wide">アスリート社員として</h2>
+                </div>
+                <p>狩行はアスリート社員制度「復活」の第1号だ。かつて前社長の時代に存在した制度はコロナ禍で途絶えていた。久次米社長がそれを再び立ち上げ、最初に声をかけたのが狩行である。</p>
+                <p>入社当初、価値を返せているのか悩んだ。練習して試合に出て、お給料をもらう。電車に乗りながら「このままでいいのかな」と考えることもあった。</p>
+                <p>「部長や社長に、これって僕にしかメリットなくないですかって正直に言いました。そしたら、お前が強くなって活躍することで、お客さんに知ってもらえたり、会社の名前を売ることになってるんだって」</p>
+                <p>今は自分なりの答えがある。スポーツクリエイトの名前を背負って国内外を回り、会社の認知を広げること。スクールの会員にレッスンで直接触れ合い、プロの技術を届けること。そして何より、結果で恩返しすること。</p>
+                <p>「業態が違うだけで、真摯に向き合うという点では、仕事と一緒だと思っています」</p>
+
+                <h3 class="text-2xl font-bold text-white mt-16 mb-6 border-l-2 border-brand-accent pl-4">お客さんといるのが楽しい</h3>
+                <p>狩行はとにかく話が好きだ。飛び込みレッスンで会員と交流する時間が、何より楽しいという。</p>
+                <p>「教えるのも好きなんで、マンツーマンでその人の悩みを解決してあげたい。あとトークショーみたいなのもやってみたいんですよ。テニスあるあるとか、結構面白いと思うんですよね」</p>
+                <p>Instagramには大会ごとに会員からコメントが届く。「狩行君の試合見てるとワクワクする」「頑張ってることで元気をもらっている」──そのひとつひとつが、孤独な日々の支えになっている。</p>
+                <p class="text-xl font-bold text-white my-8 pl-6 border-l border-white/20">「みんなに言いたいのは、チームSDCでみんなで戦ってるってこと。僕も皆さんに支えてもらいたいし、僕も皆さんにより良いテニスを届けたい」</p>
+
+                <h3 class="text-2xl font-bold text-white mt-16 mb-6 border-l-2 border-brand-accent pl-4">憧れはモンフィス</h3>
+                <p>好きな選手はガエル・モンフィス。トリッキーなプレーで観客を沸かせる、フランスの人気選手だ。</p>
+                <p>「モンフィスはプレーでみんなを楽しませている。僕がああいうプレーをできるかわからないけど、愛される選手になりたい。応援される選手がいい」</p>
+                <p>強さだけではない。見ている人を楽しませ、勇気づけること──それが、狩行の目指すプロテニスプレーヤー像だ。</p>
+                
+                <h3 class="text-2xl font-bold text-white mt-16 mb-6 border-l-2 border-brand-accent pl-4">スポーツとは何か</h3>
+                <p>最後にひとつだけ聞いた。あなたにとって、スポーツとは。</p>
+                <p>「人生を豊かにしてくれるもの。しなくても死なないし、他の娯楽もある。でもスポーツを通じて、一度きりの人生が豊かになると思います」</p>
+                <p>豊かさとは、いいことだけではない。</p>
+                <p>「悔しかったり、負けたり、浮き沈みも全部含めて経験できることが豊かさだと思う。スポーツは、第2の人生みたいなもの。どう転んでも、絶対にいい方に転ぶと思います」</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Parallax Image Section -->
+    <section class="h-[60vh] parallax-bg relative flex items-center justify-center" data-aos="fade-in">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
+                スポーツは、<br/>
+                <span class="text-brand-accent">人生を豊かにしてくれる</span> もの。
+            </h2>
+        </div>
+    </section>
+
+    <!-- Q&A Section (Full Text) -->
+    <section id="interview" class="py-24 bg-[#0a0a0f] border-t border-white/5 relative">
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-brand-gray tracking-widest uppercase text-sm font-display mb-2 block">Long Interview</span>
+                <h2 class="text-4xl md:text-5xl font-black text-white">Q&A ── 狩行祐哉ロングインタビュー</h2>
+                <div class="mt-8 text-left text-gray-400 text-sm leading-relaxed max-w-2xl mx-auto italic glass-card p-6 rounded-xl">
+                    鹿児島出身。陸上の長距離で県1番の実力を持ちながら、高校でテニスを選んだ異色の経歴。ボール拾いからインターハイへ、九州1位からインカレ1回戦負けへ、そして知り合いゼロの東京へ。アスリート社員制度「復活」の第1号として、グランドスラムを目指す狩行祐哉に聞いた。
+                </div>
+            </div>
+            
+            <div class="space-y-12">
+                <!-- Question loop structure -->
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>テニスとの出会いを教えてください。</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        父親がテニスをやっていて、物心つく前から自然と。小学2年生からですね。ただ他のスポーツもやっていて、陸上と水泳も回していました。どちらかというと陸上の方が強くて、長距離では鹿児島県で1番。それは親にもらったものかもしれないです。父は元々サッカーをやっていて、テニスに転向した人で、結構運動できる人だったみたいです。テニスの方は小4で九州大会に出たぐらいで、県で優勝とかはなくて。基本はお父さんが教えてくれていました。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>中学ではテニスではなく陸上部に入った？</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        中学に入る時も陸上かテニスか迷ったんですけど、硬式テニス部がなかったんです。しかも僕は陸上でずっと県1番だったので、陸上部に入りました。そこからテニスは週1〜2回に減って、試合にもほとんど出なくなりました。1500mとか3000mの長距離。苦しいやつですね、今思えば結構大変でした。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>そして高校進学で、陸上とテニスの両方から推薦が来た。</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        はい。陸上の方からも来ていたし、テニスも2校ぐらい来ていました。成績的には絶対に陸上の方が良かったし、周りからも結構反対というか「なんで？」って言われました。親にも相談したんですけど、基本は「自分で決めな」と。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>それでもテニスを選んだ。理由は何だったんですか？</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        一番大きかったのは、鹿児島実業の仲間です。当時、鹿児島県で一番強い鳳凰高校がずっと何連覇もしていて、そこは県外の選手が多かった。それに対して鹿児島実業は県内の選手だけで戦っている2番手。ちょうど僕の代の県トップ5人ぐらいが「鳳凰高校を倒そう」って鹿実を選んでいて、みんな燃えていた。僕もそこに入りたかった。仲間と一緒に王者を倒す。そのストーリーに乗りたかったんです。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>逆に、陸上を選ばなかった理由は？</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        正直、大人までずっと走って自分を追い込み続けるのはきついなって気持ちがありました。テニスを経験していたから、そっちの方が楽しくて一生懸命できるんじゃないかと。でもだからなおさら、テニス部に入ってからも「陸上のきつさから逃げて、楽なテニスを選んでしまったんじゃないか」っていう葛藤はずっとありました。高校3年間を通じてずっと。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>その葛藤は、どう消化していったんですか？</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        鹿児島実業のグラウンドって、陸上グラウンドの中にテニスコートがあるんです。鹿実は陸上も強いので、走っている選手たちを横目に、自分はテニスのボール拾いをしている。入部したものの実力が足りなくて、最初は戦力外だったので。「間違ったんじゃないか」「自分から逃げてるんじゃないか」って、特に1年目はきつかったです。<br><br>
+                        でも、もう選んでしまったのはしょうがないし、逃げてる理由だけじゃなかった。本当に鳳凰高校を倒したいって気持ちもあったので、「自分が選んだ道を正解にするしかない」って。逆にテニスでも陸上ぐらいきついことをやっていこうって決めました。部活が7時に終わっても8時まで必ず残って、終わった後に1人で長距離を走ったり、インターバルしたり。陸上部の癖が抜けなかったんですかね。ボール拾いの間も、強い選手が何をしているか観察して、聞いて、できることは全部やりました。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>その結果、3年目のインターハイ予選で初めて全国への切符をつかんだ。</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        鹿児島県のベスト4に初めて入って、3位。しかもその時に勝った相手が、ジュニアからずっと1回も勝てなかった選手だったんです。それは素直に嬉しかったですね。ただ、インターハイ本戦では1回戦負け。でも満足感よりも「もっと上の世界を知りたい」っていう気持ちの方が強かったです。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>大学は鹿屋体育大学。関東ではなく地元を選んだ？</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        本音を言えば関東に行きたかったんですけど、3年目に結果が出たので選べる幅が限られていて。鹿屋は九州では一番レベルが高かったし、教員免許も取れる。親が2人とも学校の先生で、生き生きしているのを見ていたので、テニスがだめでも体育の先生になれるようにって。1年目からしっかり単位を取って動いてました。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>大学での成績は？</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        2年生で九州1位になって、そこから3年連続で九州の頂点に立ち続けました。でもインカレに出ると1回戦負け。ずっとそれで。九州からでも全国で戦えることを証明したかったんですけど、4年間を通して叶わなかった。九州1位で満足してたら全国なんて見なくてよかったかもしれないけど、インカレで勝ちたくて、全然満足できなくて。いろいろ大変でしたね、そこは。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>大学4年で進路に悩んでいたとき、久次米社長から声がかかった。</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        進路がなかなか決まらなくて。テニスのない就職は考えられないけど、実業団は仕事がメインだからプロの成長スピードには勝てない。消去法で大学院を選びかけていたときに、鹿屋体育大学のOBである久次米社長が「アスリート社員制度を復活させたい」と選手を探していると聞いて。もう二つ返事でした。運命かのように、「もう絶対行く」って。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>ご両親は賛成してくれましたか？</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        揉めました（笑）。急に東京の知らない会社に行くと言い出して、しかも大学院に行くって言ってた矢先に。親はやっぱり心配ですよね。結局、大学院に籍を置いたまま上京するっていう形で折り合いをつけました。でも僕の中では迷いはなかった。陸上からテニスに転向して、ボール拾いから全国大会まで行った。あの3年間で「僕がやれば絶対できる」っていう自信は実証していたので。よりいい環境に身を置いたら、もっと強くなれると思っていました。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>東京に来て最初に困ったことは？</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        練習相手です。知り合いがゼロなんで。Instagramで手当たり次第DMして「練習に参加させてもらえませんか」って。日本大学が快く受け入れてくれたのが大きかったですね。入社1年で日本ランキングが500番台から50位まで上がって、世界ランキングも取れた。陸上上がりで、鹿児島にずっといて、ジュニアの全国区でもなかった人間が。自分でもできすぎてると思います。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>アスリート社員として、最初に感じたことは？</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        正直、「これって僕にしかメリットなくないですか」って部長や社長に言いました。練習して試合に出てお給料をもらって、でも何か目に見えるものを作っているわけじゃない。電車に乗りながら「このままでいいのかな」って考えることもありました。そしたら「お前が強くなって活躍することで、お客さんに知ってもらえたり、会社の名前を売ることになってるんだ」って。今は自分なりに腹落ちしています。業態が違うだけで、真摯に向き合うっていう点では仕事と一緒だなって。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>プロの生活で一番きついことは何ですか？</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        孤独ですね。テニスコートにいる時は練習相手と話すけど、基本は1人で移動して、1人でご飯を食べる。普通の会社員なら飲み会があったり土日に遊んだりするけど、僕たちはオフが週1日ぐらいで、その日も整骨院に行ったりケアの時間が多い。「うわー、誰かと遊びてえな」って思いながら1日が終わることもあります。1年目は分からないことだらけで孤独を感じる暇もなかったんですけど、2年目に慣れてくるとテニス選手って孤独やなって。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>そういうとき、どうしてますか？</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        たまに社長とご飯に行かせてもらったり。あとは今年入社した石川真輝と家が近いので、ご飯に行ける時は行きます。でもアスリート社員同士もみんな拠点がバラバラで、休みの日も各自のスケジュールで動いてるから、なかなか絡みは少ないですね。だからこそ、お客さんといる時間が楽しいんです。飛び込みレッスンで会員さんと交流するのが、正直1人でいるより楽しい。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>スポーツクリエイトってどんな会社ですか？</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        入社式のとき驚いたんですけど、普通は下っ端の僕たちが片付けとかやるじゃないですか。でも上の人たちが率先して動いてるんですよ。有明のイベントの運営を任された時も、久次米社長が自分からほうきを持って掃除してて。「いやいや、しなくていいっすよ」って言っても。そういう姿を見て、社員がついていきたいと思ってるんだと思います。想像してたより全然温かい会社でした。多分こんなに仲がいい会社、なかなかないんじゃないですかね。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>やってみたいイベントはありますか？</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        マンツーマンでその人の悩みを解決するようなレッスンと、あとトークショー。テニスあるあるとか、結構面白いと思うんですよね。教えるのもしゃべるのも好きなんで。今は飛び込みレッスンの最初の挨拶でパッと自己紹介するだけなので、もっとちゃんと自分のことやグランドスラムへの想いを伝えたいなっていうのはあります。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>好きな選手は？</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        ガエル・モンフィスです。トリッキーなプレーでみんなを楽しませている選手。僕がああいうプレーをできるかわからないけど、愛される選手になりたい。応援される選手がいい。強くなるからこそ説得力がある。僕が教えていることや喋っていることも、弱かったら「誰お前」ってなっちゃうので。しっかり競技力を上げた上で、みんなを楽しませたいですね。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>会員さんに伝えたいことは？</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        Instagramには結果だけ載せてるから華やかに見えるかもしれないけど、裏では孤独だし苦しいこともたくさんある。でも皆さんが大会ごとに送ってくれるコメントが本当にありがたいんです。「狩行君の試合見てるとワクワクする」「頑張ってることで元気もらってる」って言ってくださる方がいて、それが孤独な日々の支えになっています。チームSDCでみんなで戦ってる。僕も皆さんに支えてもらいたいし、皆さんにより良いテニスを届けたい。
+                    </div>
+                </div>
+
+                <div class="pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>最後に。あなたにとって、スポーツとは？</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        人生を豊かにしてくれるもの。しなくても死なないし、他の娯楽もある。でもスポーツを通じて、一度きりの人生が豊かになると思います。豊かさって、いいことだけじゃないんですよ。悔しかったり、負けたり、浮き沈みも全部含めて経験できることが豊かさだと思う。スポーツは、第2の人生みたいなもの。どう転んでも、絶対にいい方に転ぶと思います。
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile" class="py-24 relative overflow-hidden">
+        <!-- 背景の装飾 -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-blue/5 rounded-full blur-3xl -z-10"></div>
+        
+        <div class="max-w-5xl mx-auto px-6" data-aos="fade-up">
+            <div class="glass-card rounded-3xl p-8 md:p-16 flex flex-col md:flex-row items-center gap-12">
+                <div class="w-48 h-48 md:w-64 md:h-64 flex-shrink-0 relative">
+                    <div class="absolute inset-0 rounded-full border-2 border-brand-accent/30 animate-pulse scale-105"></div>
+                    <img src="../assets/アスリート_狩行_プロフィール写真2.jpg" alt="狩行 祐哉" class="w-full h-full object-cover rounded-full border-4 border-[#0a0a0f] shadow-2xl relative z-10">
+                </div>
+                <div>
+                    <span class="text-brand-blue font-display tracking-widest uppercase text-sm font-bold mb-2 block">Profile</span>
+                    <h2 class="text-4xl font-black text-white mb-2">狩行 祐哉 <span class="text-xl font-display font-medium text-brand-gray ml-2">Yuya Kariyuki</span></h2>
+                    <p class="text-brand-accent font-bold mb-6">プロテニスプレーヤー / スポーツクリエイト アスリート社員</p>
+                    <p class="text-gray-400 leading-relaxed mb-6 font-sans">
+                        鹿児島出身。小学2年生からテニスを始め、陸上長距離でも県内随一の実力を誇る。鹿児島実業高校でテニスに専念し、インターハイ出場。鹿屋体育大学では3年連続九州1位。卒業後、スポーツクリエイトのアスリート社員「復活」第1号として上京。
+                    </p>
+                    <div class="flex flex-wrap gap-4 mt-6">
+                        <div class="px-5 py-2 border border-brand-accent/50 rounded-full text-brand-accent text-sm font-bold">
+                            今年の目標: 世界ランキング1000位以内
+                        </div>
+                        <div class="px-5 py-2 border border-brand-blue/50 rounded-full text-brand-blue text-sm font-bold">
+                            目標: グランドスラム出場
+                        </div>
+                        <a href="https://www.instagram.com/karigyo_toshiki/" target="_blank" class="px-5 py-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-white text-sm font-bold shadow-lg hover:opacity-80 transition-opacity flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 py-8 text-center text-brand-gray font-sans text-sm">
+        <p>&copy; 2026 Sports Create / Team SDC. All Rights Reserved.</p>
+        <p class="mt-2 opacity-50">取材・構成：衣笠（2026年4月）</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50,
+        });
+
+        // スクロール時のNavbar背景変化
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-[#0a0a0f]/80', 'backdrop-blur-md');
+            } else {
+                nav.classList.remove('bg-[#0a0a0f]/80', 'backdrop-blur-md');
+            }
+        });
+    </script>
+</body>
+</html>

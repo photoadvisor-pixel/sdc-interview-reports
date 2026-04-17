@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryuichiro Nakano | プロテニスプレーヤー 中野 龍一郎</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0a0a0f',
+                            accent: '#ccff00', // ネオンイエロー
+                            blue: '#00d2ff', // シアンブルー
+                            gray: '#8a8f98'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        display: ['"Outfit"', '"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0a0a0f;
+            color: #f3f4f6;
+        }
+        .hero-bg {
+            background-image: 
+                linear-gradient(to top, rgba(10, 10, 15, 1) 5%, rgba(10, 10, 15, 0.2)), 
+                url('../assets/アスリート_中野_テニス写真1.jpg');
+            background-size: cover;
+            background-position: center 20%;
+        }
+        .parallax-bg {
+            background-image: 
+                linear-gradient(rgba(10, 10, 15, 0.7), rgba(10, 10, 15, 0.9)), 
+                url('../assets/アスリート_中野_テニス写真2.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: top center;
+        }
+        .accent-text-gradient {
+            background: linear-gradient(135deg, #ccff00, #00d2ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        .article-text p {
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            letter-spacing: 0.03em;
+            color: #d1d5db;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased overflow-x-hidden selection:bg-brand-accent selection:text-black">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="glass-card border-b border-white/5">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+                <div class="text-xl font-display font-bold tracking-wider text-white">
+                    TEAM SDC <span class="text-brand-accent">ATHLETE</span>
+                </div>
+                <div class="text-sm font-medium tracking-widest text-brand-gray hidden md:block uppercase">
+                    Pro Tennis Player
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen hero-bg flex flex-col justify-end pb-24 md:pb-32 px-6">
+        <div class="max-w-7xl mx-auto w-full" data-aos="fade-up" data-aos-duration="1200">
+            <div class="mb-4 inline-block px-4 py-1 border border-brand-accent text-brand-accent text-xs md:text-sm font-bold tracking-widest uppercase rounded-full">
+                Sports Create Athlete
+            </div>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-black tracking-tight text-white leading-tight mb-2">
+                RYUICHIRO <br><span class="accent-text-gradient">NAKANO</span>
+            </h1>
+            <p class="text-xl md:text-2xl font-bold font-sans text-gray-300 tracking-wider mt-4">
+                中野 龍一郎
+            </p>
+            <div class="mt-8 max-w-2xl border-l-4 border-brand-accent pl-6 py-2">
+                <p class="text-2xl md:text-3xl font-bold leading-relaxed leading-normal">
+                    才能がなくても、努力で<br/>
+                    どこまで行けるか証明したい。
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Story Main Content -->
+    <main class="max-w-7xl mx-auto px-6 py-24 md:py-32 grid grid-cols-1 lg:grid-cols-12 gap-16 relative">
+        <!-- サイドナビゲーション (LG screen) -->
+        <div class="hidden lg:block lg:col-span-3">
+            <div class="sticky top-32 glass-card p-6 rounded-2xl">
+                <h3 class="font-display font-bold text-lg text-brand-accent uppercase tracking-widest mb-6 border-b border-white/10 pb-4">Contents</h3>
+                <ul class="space-y-4 text-sm font-medium text-brand-gray">
+                    <li><a href="#story" class="hover:text-white transition-colors">Story - 県大会1回戦負けから始まった</a></li>
+                    <li><a href="#pro" class="hover:text-white transition-colors">プロの世界で感じたこと</a></li>
+                    <li><a href="#athlete" class="hover:text-white transition-colors">アスリート社員として</a></li>
+                    <li><a href="#interview" class="hover:text-white transition-colors">ロングインタビュー (Q&A)</a></li>
+                    <li><a href="#profile" class="hover:text-white transition-colors">Profile</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 記事本文 -->
+        <div class="lg:col-span-9 article-text">
+            
+            <section id="story" class="mb-24" data-aos="fade-up">
+                <div class="flex items-center gap-4 mb-10 border-b border-white/10 pb-6">
+                    <span class="text-4xl font-display font-black text-brand-blue/30">01</span>
+                    <h2 class="text-3xl md:text-4xl font-black text-white tracking-wide uppercase font-display">Story</h2>
+                </div>
+
+                <h3 class="text-2xl font-bold text-white mb-6 border-l-2 border-brand-accent pl-4">県大会1回戦負けから始まった</h3>
+                <p>小学1年生でラケットを握り、6年生から週6日の練習生活へ。同時に「プロになる」と決めた。ただ、才能に恵まれたタイプではない。</p>
+                <p>「最初は県大会で1回勝てるか勝てないかぐらい。高校まで全国大会には届きませんでした」</p>
+                <p>全国屈指の激戦区・神奈川で、勝てない日々が続く。それでも他の道を考えたことは一度もなかった。<br>父もかつてプロを目指したテニスプレーヤー。息子の負け試合に怒ることは一度もなかったという。「両親が結果に対して怒らなかったことが、今でも助かっていること」と中野は振り返る。勝てなくても続けられる強さは、その環境の中で育まれていった。</p>
+
+                <h3 class="text-2xl font-bold text-white mt-16 mb-6 border-l-2 border-brand-accent pl-4">コロナ禍の努力が、大学で花開く</h3>
+                <p>転機は日本大学入学直後に訪れる。1年目でいきなりインカレ出場を果たしたのだ。</p>
+                <p class="text-xl font-bold text-white my-8 pl-6 border-l border-white/20">「コロナの時期もみんなが止まっている間に、ずっと練習し続けていた。大学に入ったとき、あれ、前より勝てるなって」</p>
+                <p>誰もが立ち止まった時期に、ひたすら努力を重ねていた。その貯金が、大学という舞台で一気に花開く。4年次にはインカレベスト32、団体戦では日本大学の王座優勝に貢献。県大会1回戦負けだった少年が、大学テニスの頂点に立つチームの一員になっていた。</p>
+
+                <h3 class="text-2xl font-bold text-white mt-16 mb-6 border-l-2 border-brand-accent pl-4">世界の壁 ── 日本で勝つのと海外で勝つのは全然違う</h3>
+                <p>大学2年、チュニジアでの初のITF（国際大会）遠征。世界ランキング1400位台の選手にいきなり勝ち、「いける」と感じた直後に腹筋の肉離れ。帰国後、歯車が狂い始める。</p>
+                <p>「海外の選手は全員、自分から点を取ることしか考えていない。入れにいっている選手は本当にいない。日本で勝つのと海外で勝つのは全然違う」</p>
+                <p>2026年1月、プロに転向。国内ランキングが下がることを覚悟の上で、国際大会（ITF）に絞る決断を下す。今年2月のエジプト遠征をきっかけに、最優先課題に据えたのはサーブと決定力の強化。元々の武器である「走る力」だけでは、世界には通用しない。自ら攻撃して点を取る力──そこに今、全力で向き合っている。</p>
+
+                <h3 class="text-2xl font-bold text-white mt-16 mb-6 border-l-2 border-brand-accent pl-4">10年ぶりにラケットを置いた1週間</h3>
+                <p>突っ走り続けた代償は、足首の靭帯にきた。無理を重ね、ついに体が動かなくなる。</p>
+                <p>「大学までは寮で同期や先輩後輩がいて、試合に負けても部屋に戻ればみんながいた。プロになって実家に戻って、全てをテニスに注ぎ込む時間が増えた分、自分では気づかないうちに追い詰めすぎていた」</p>
+                <p>10年以上ぶりに、1週間ラケットを持たなかった。持てなかったのではない。持つ気にならなかったのだ。和歌山で自然の中に身を置き、大学の先輩や地元の同級生と過ごすうちに、ようやく気づく。</p>
+                <p class="text-brand-accent font-bold text-xl my-6">「自然や人と触れ合う時間が自分にとってとても大切だ」</p>
+                <p>この1週間が、再びテニスに向き合う力をくれた。</p>
+            </section>
+
+            <section id="pro" class="mb-24" data-aos="fade-up">
+                <div class="flex items-center gap-4 mb-10 border-b border-white/10 pb-6">
+                    <span class="text-4xl font-display font-black text-brand-blue/30">02</span>
+                    <h2 class="text-3xl md:text-4xl font-black text-white tracking-wide">プロの世界で感じたこと</h2>
+                </div>
+                <p>プロになって最も驚いたことは、人より「没頭する能力」、「人生を賭ける」力があること。</p>
+                <p>「僕は才能がないと思ってずっとやってきた。結果もジュニアの時まで本当に出なかった。それでもやり続けてきたところが、今の日本のプロの人たちと違う部分だと感じています」</p>
+                <p>一般的なプロ選手の練習は1日2時間程度。中野は6時間。しかも、ただ量をこなしているわけではない。</p>
+                <p>「練習をただやるんじゃなくて、その質をどう高めるかを考えてやっている。そこが違うと思います」</p>
+            </section>
+
+            <section id="athlete" class="mb-12" data-aos="fade-up">
+                <div class="flex items-center gap-4 mb-10 border-b border-white/10 pb-6">
+                    <span class="text-4xl font-display font-black text-brand-blue/30">03</span>
+                    <h2 class="text-3xl md:text-4xl font-black text-white tracking-wide">アスリート社員として</h2>
+                </div>
+                <p>2025年4月からスポーツクリエイトの社員になり、2026年1月にプロ転向。大学の王座戦後にスポーツクリエイトとの縁がつながり、テニスだけに集中できる環境を手にする。</p>
+                <p>「思っていた以上にすごくいい環境。選手としてテニスだけに集中させてもらっています」</p>
+                <p>とはいえ、最初から不安がなかったわけではない。お給料をもらいながらテニスだけをしていることへの後ろめたさ。その重荷が消えたのは、初めて参加した社内合宿でのことだ。</p>
+                <div class="bg-brand-accent text-black font-bold text-xl px-6 py-4 rounded-xl inline-block my-6 shadow-lg">
+                    「俺ら頑張るから、テニスだけまじ頑張ってよ」
+                </div>
+                <p>先輩社員みんなが、そう言ってくれた。</p>
+                <p>今、Instagramでは海外遠征の日常や練習風景を毎日発信し、月間100万回の閲覧を記録している。テニス界で「スポーツクリエイト」を知らなかった人たちに、その名前を届ける日々。スクールへの飛び込みレッスンでは会員と直接交流し、プロの技術をコーチ陣にも共有する。</p>
+                <p>「もっともっと強くなって、グランドスラムや有明のコロシアムでプレーしているところを見せたい。自分が行っているスクールのアスリート社員がそういうところでプレーしてるんだ、って思ってもらえるようになりたい」</p>
+
+                <h3 class="text-2xl font-bold text-white mt-16 mb-6 border-l-2 border-brand-accent pl-4">スポーツとは何か</h3>
+                <p>最後にひとつだけ聞いた。あなたにとって、スポーツとは。</p>
+                <p>「なくてもいいもの。別にスポーツがなくても死ぬことはない。だからこそ価値がある」</p>
+                <p>少し間を置いて、続けた。</p>
+                <p>「自分の価値を見出せるもの。苦しいことを経験できるし、人間として成長できる部分がすごくあると思います」</p>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Parallax Image Section -->
+    <section class="h-[60vh] parallax-bg relative flex items-center justify-center" data-aos="fade-in">
+        <div class="absolute inset-0 bg-gradient-to-l from-black/80 to-transparent"></div>
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-6 text-right">
+            <h2 class="text-4xl md:text-5xl lg:text-7xl font-black text-white leading-tight">
+                なくてもいいものに、<br/>
+                <span class="text-brand-accent">人生をかける。</span>
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-300 font-medium leading-relaxed mt-6">
+                その矛盾の中にこそ、スポーツの本質がある。
+            </p>
+        </div>
+    </section>
+
+    <!-- Q&A Section (Full Text) -->
+    <section id="interview" class="py-24 bg-[#0a0a0f] border-t border-white/5 relative">
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-brand-gray tracking-widest uppercase text-sm font-display mb-2 block">Long Interview</span>
+                <h2 class="text-4xl md:text-5xl font-black text-white">Q&A ── 中野龍一郎ロングインタビュー</h2>
+                <div class="mt-8 text-left text-gray-400 text-sm leading-relaxed max-w-2xl mx-auto italic glass-card p-6 rounded-xl">
+                    2026年1月にプロ転向。スポーツクリエイトのアスリート社員として、グランドスラム優勝を目指す。神奈川県横浜市出身。年間345日、1日6時間をテニスに費やす努力の人に、これまでの道のりとこれからを聞いた。
+                </div>
+            </div>
+            
+            <div class="space-y-12">
+                <!-- Question loop structure -->
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>テニスを始めたきっかけを教えてください。</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        小学1年生のとき、地元の東戸塚にあるエバーグリーン（現KPI）で始めました。実は今のKPIのインドアコートがあるところが、僕がテニスを始めた場所なんです。小6から週6日の練習になって、そのときに「プロになる」って決めました。それからプロになること以外を考えたことは一度もないです。受験も1回もやらずにここまで来ました。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>小6でプロを宣言して、ご両親はどんな反応でしたか？</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        「プロになりなさい」とは言われなかったですけど、父が元々プロを目指していたテニスプレーヤーだったこともあって、自然とそういう方向に。一番助かったのは、負けても怒られなかったことです。ほとんど負けてばかりの時期が長かったんですけど、結果に対して怒られたことが一度もなかった。もしあのとき親に怒られていたら、勝てない時期に続けられなかったと思います。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>小学生から高校まで、成績はどうだったんですか？</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        正直、全然でした。最初は県大会で1回勝てるか勝てないかぐらい。神奈川県ってテニスの層がすごく厚くて、高校まで全国大会には一度も行けませんでした。高3のときはコロナで試合自体が全部なくなってしまって。ただ、そのコロナの時期にみんなが止まっている間もずっと練習し続けていたことが、大学に入ってから一気に結果につながりました。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>全国大会に行ったことがないのに、日本大学に入れた？</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        普通なら入れないんです。日大は全国大会に出たことがない人は取らないので。でも、今サポートしていただいているマサスポーツシステムの山田監督が日大の監督で、僕の高校の橘テニスアカデミーも運営していて、そのつながりで押し込んでもらいました。入ったら1年目でいきなりインカレに出場できて、自分でも驚きました。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>大学4年のインカレで意識を失ったと聞きました。</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        ベスト32まで行った3回戦で、試合中に意識が飛んでしまって。それで負けたんですけど、その年は団体で日大が王座優勝できたので、それはすごく大きかったです。県大会1回戦負けだった自分が、大学テニスの頂点に立つチームの一員になれた。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>大学2年でチュニジアに行ったそうですが、初の海外遠征はどうでしたか？</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        いきなり世界ランキング1400位台の選手に勝って、「いける」と思った直後に腹筋を肉離れしてしまって。帰国してからも歯車が狂って、しばらく大変でした。でもあの遠征で、日本と海外の違いを痛感しました。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>具体的に、何が違いましたか？</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        テニスには「チキる」っていう言葉があるんですけど、要は攻めずに安全に入れにいくこと。日本人にはそういう選手が結構いるんですけど、海外の選手でチキっている人は本当に見たことがない。全員、自分から点を取ることしか考えていない。粘り強い選手はいるけど、入れにいっている選手はいない。そこが全然違います。だから今、サーブと決定力の強化を最優先でやっています。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>2026年1月にプロに転向して、一番驚いたことは？</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        プロになって最も驚いたことは、人より「没頭する能力」、「人生を賭ける」力があること。プロになると自分で自分を律しなきゃいけない。その点において人よりテニスに対して向き合う能力が自分はあるなと感じました。<br>僕は多い時は練習を6時間やって、さらにトレーニングもやります。しかもただやるんじゃなくて、質をどう高めるかを毎日考えています。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>年間の休みが約20日だと聞きました。</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        去年1年間で休んだのが20日ぐらいですね。でも今年の4月に、10年以上ぶりに1週間休みました。足首の靭帯を痛めて無理を続けた結果、体が動かなくなってしまって。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>10年以上ラケットを握らない日がなかった人が、1週間休んだ。</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        持てなかったんじゃなくて、持つ気にならなかったんです。それは自分でも初めての感覚でした。大学までは寮で同期や先輩後輩がいて、負けても部屋に戻ればみんながいた。プロになって実家に戻って、全てをテニスに注ぎ込む時間が増えた分、気づかないうちに追い詰めすぎていたんだと思います。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>その1週間、何をしていましたか？</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        和歌山に行って、自然の中にいたり、大学の先輩や地元の同級生と会ったり。今までだったら怪我してもできることを探してやってたんですけど、あのときは1回テニスから完全に離れようと思いました。そこで「自然や人と触れ合う時間が自分にとってとても大切だ」って気づいて。あの1週間が、再びテニスに向き合う力をくれました。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>Instagramで月間100万閲覧だそうですが、SNSはいつから？</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        実は最初に僕のInstagramを始めたのは父なんです。高校2年のとき「スポンサー集めるならSNSやった方がいい」って言われて、父が先に僕のアカウントを作って投稿していた。僕自身が引き継いだのは高3ぐらいですね。6年ぐらい続けています。今はほぼ毎日投稿していて、海外遠征のときに日常をリアルタイムで発信したら、月に100万回ぐらい見てもらえるようになりました。1回の投稿で70万回再生されたこともあります。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>アスリート社員としてスポーツクリエイトに入ったとき、不安はありましたか？</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        正直、お給料をもらいながらテニスだけをしていることへの後ろめたさはありました。でも初めて参加した社内合宿で、社員の方に「俺ら頑張るから、テニスだけまじ頑張ってよ」って言ってもらえて。全員がそう言ってくれる人しかいなかった。あれで本当に救われました。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>同じアスリート社員の先輩、狩行さんをどう見ていますか？</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        狩行さんはすごく自分を分析する力が強い人です。効率よく頑張る人で、他のプロとはまた違う強さがある。僕はどちらかというと量をガッと積むタイプなので、狩行さんのやり方は参考になります。そういう人が先輩だったのはすごく良かったです。
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>会員さんとの交流で印象に残っていることは？</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        全日本選手権とか有明の試合を見に来てくださる方がいたり、InstagramにDMをくださったり。飛び込みレッスンで直接お会いして、自分のテニスを間近で見てもらえるのは嬉しいです。もっとこういう機会を増やして、いつかグランドスラムや有明のコロシアムでプレーしているところを見せたい。「自分が通っているスクールのアスリート社員が、あの舞台に立っている」って思ってもらえるようになりたいですね。
+                    </div>
+                </div>
+
+                <div class="pb-8" data-aos="fade-up">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-4 flex gap-3">
+                        <span class="text-brand-blue shrink-0">──</span>
+                        <span>最後に。あなたにとって、スポーツとは？</span>
+                    </h3>
+                    <div class="pl-8 text-gray-300 leading-relaxed font-sans">
+                        なくてもいいもの。別にスポーツがなくても死ぬことはない。だからこそ価値がある。自分の価値を見出せるものですかね。苦しいことを経験できるし、人間として成長できる部分がすごくあると思います。
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile" class="py-24 relative overflow-hidden">
+        <!-- 背景の装飾 -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-blue/5 rounded-full blur-3xl -z-10"></div>
+        
+        <div class="max-w-5xl mx-auto px-6" data-aos="fade-up">
+            <div class="glass-card rounded-3xl p-8 md:p-16 flex flex-col md:flex-row items-center gap-12">
+                <div class="w-48 h-48 md:w-64 md:h-64 flex-shrink-0 relative">
+                    <div class="absolute inset-0 rounded-full border-2 border-brand-accent/30 animate-pulse scale-105"></div>
+                    <img src="../assets/アスリート_中野_プロフィール写真.jpg" alt="中野 龍一郎" class="w-full h-full object-cover rounded-full border-4 border-[#0a0a0f] shadow-2xl relative z-10">
+                </div>
+                <div>
+                    <span class="text-brand-blue font-display tracking-widest uppercase text-sm font-bold mb-2 block">Profile</span>
+                    <h2 class="text-4xl font-black text-white mb-2">中野 龍一郎 <span class="text-xl font-display font-medium text-brand-gray ml-2">Ryuichiro Nakano</span></h2>
+                    <p class="text-brand-accent font-bold mb-6">プロテニスプレーヤー / スポーツクリエイト アスリート社員</p>
+                    <p class="text-gray-400 leading-relaxed mb-6 font-sans">
+                        神奈川県横浜市出身。インカレベスト32、日本大学王座優勝メンバー。2025年4月からスポーツクリエイトへ、2026年1月にプロ転向。年間345日・1日6時間のハードワークをこなす努力の天才。Instagramでの海外遠征発信も積極的に行っている。
+                    </p>
+                    <div class="flex flex-wrap gap-4 mt-6">
+                        <div class="px-5 py-2 border border-brand-accent/50 rounded-full text-brand-accent text-sm font-bold">
+                            今年の目標: ATP 5ポイント獲得 / 世界1500位台
+                        </div>
+                        <div class="px-5 py-2 border border-brand-blue/50 rounded-full text-brand-blue text-sm font-bold">
+                            8年後の目標: グランドスラム優勝
+                        </div>
+                        <a href="https://www.instagram.com/ryu16_nakano/" target="_blank" class="px-5 py-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-white text-sm font-bold shadow-lg hover:opacity-80 transition-opacity flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 py-8 text-center text-brand-gray font-sans text-sm">
+        <p>&copy; 2026 Sports Create / Team SDC. All Rights Reserved.</p>
+        <p class="mt-2 opacity-50">取材・構成：衣笠（2026年4月）</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50,
+        });
+
+        // スクロール時のNavbar背景変化
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-[#0a0a0f]/80', 'backdrop-blur-md');
+            } else {
+                nav.classList.remove('bg-[#0a0a0f]/80', 'backdrop-blur-md');
+            }
+        });
+    </script>
+</body>
+</html>
